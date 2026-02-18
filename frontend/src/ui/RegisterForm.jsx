@@ -143,7 +143,7 @@ const Form = () => {
         >
           Continue
         </button>
-        {/* <a href="http://localhost:3000/auth/google">
+        <a href="http://localhost:3000/auth/google">
           <button
             type="button"
             className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-purple-200/5 py-3 font-medium text-white transition duration-300 hover:bg-indigo-900"
@@ -151,7 +151,7 @@ const Form = () => {
             Continue With Google
             <FcGoogle size={20} />
           </button>
-        </a> */}
+        </a>
         <p className="mt-6 text-center text-sm text-white/60">
           Do you have an account?{" "}
           <Link to="/login" className="text-white underline">
