@@ -23,26 +23,26 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (!information.username.trim()) {
-    //   return toast.error("Username is required");
-    // }
+    if (!information.username.trim()) {
+      return toast.error("Username is required");
+    }
 
-    // if (!information.email.trim()) {
-    //   return toast.error("Email is required");
-    // }
+    if (!information.email.trim()) {
+      return toast.error("Email is required");
+    }
 
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(information.email)) {
-    //   return toast.error("Email is invalid");
-    // }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(information.email)) {
+      return toast.error("Email is invalid");
+    }
 
-    // if (information.password.length < 6) {
-    //   return toast.error("Password must be at least 6 characters");
-    // }
+    if (information.password.length < 6) {
+      return toast.error("Password must be at least 6 characters");
+    }
 
-    // if (information.password !== information.repassword) {
-    //   return toast.error("Passwords do not match");
-    // }
+    if (information.password !== information.repassword) {
+      return toast.error("Passwords do not match");
+    }
     register(information);
   };
 
