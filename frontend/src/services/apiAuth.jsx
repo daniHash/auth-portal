@@ -29,7 +29,7 @@ export const login = async (body) => {
 
   try {
     const response = await apiRequests.post("auth/login", body);
-    toast.success("Welcome", {
+    toast.success("User created. please login", {
       id: loadingToastId,
     });
 
