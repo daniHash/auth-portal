@@ -1,4 +1,4 @@
-# Auth Portal 🚀
+# Auth Portal 
 
 ---
 
@@ -137,3 +137,4 @@ Auth Portal is proudly developed and maintained by these amazing contributors:
 🔹 **GitHub**: [@daniHash](https://github.com/danihash)
 
 ---
+
