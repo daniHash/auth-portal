@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { BiHide, BiShowAlt } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
-import { register } from "../services/config/apiAuth";
+import { Link, useNavigate } from "react-router-dom";
+import { register } from "../services/apiAuth";
 import toast from "react-hot-toast";
 
 const initialState = {
-  username: "",
+  name: "",
   email: "",
   password: "",
   repassword: "",
@@ -16,34 +16,47 @@ const Form = () => {
   const [information, setInformation] = useState(initialState);
   const [showPassword, setShowPassword] = useState(false);
   const [showRepassword, setShowRepassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInformation((prev) => ({ ...prev, [name]: value }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // if (!information.username.trim()) {
-    //   return toast.error("Username is required");
-    // }
+    if (!information.name.trim()) {
+      return toast.error("Name is required");
+    }
 
-    // if (!information.email.trim()) {
-    //   return toast.error("Email is required");
-    // }
+    if (!information.email.trim()) {
+      return toast.error("Email is required");
+    }
 
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(information.email)) {
-    //   return toast.error("Email is invalid");
-    // }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(information.email)) {
+      return toast.error("Email is invalid");
+    }
 
-    // if (information.password.length < 6) {
-    //   return toast.error("Password must be at least 6 characters");
-    // }
+    if (information.password.length < 6) {
+      return toast.error("Password must be at least 6 characters");
+    }
 
-    // if (information.password !== information.repassword) {
-    //   return toast.error("Passwords do not match");
-    // }
-    register(information);
+    if (information.password !== information.repassword) {
+      return toast.error("Passwords do not match");
+    }
+
+    const data = {
+      name: information.name,
+      email: information.email,
+      password: information.password,
+    };
+
+    try {
+      const response = await register(data);
+      navigate("/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -59,10 +72,10 @@ const Form = () => {
       <div className="flex w-full flex-col items-center justify-center gap-4">
         <input
           type="text"
-          placeholder="Username"
+          placeholder="Name"
           className="w-full rounded-md border border-white/10 bg-white/10 px-3 py-3 placeholder-white/60 transition-all duration-200 ease-in focus:ring-2 focus:ring-white/40 focus:outline-none"
-          name="username"
-          value={information.username}
+          name="name"
+          value={information.name}
           onChange={handleChange}
         />
         <input
@@ -130,14 +143,15 @@ const Form = () => {
         >
           Continue
         </button>
-        <button
-          type="submit"
-          onClick={() => window.open("http://localhost:3000/auth/google", "_self")}
-          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-purple-200/5 py-3 font-medium text-white transition duration-300 hover:bg-indigo-900"
-        >
-          Continue With Google
-          <FcGoogle size={20} />
-        </button>
+        <a href="http://localhost:3000/auth/google">
+          <button
+            type="button"
+            className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-purple-200/5 py-3 font-medium text-white transition duration-300 hover:bg-indigo-900"
+          >
+            Continue With Google
+            <FcGoogle size={20} />
+          </button>
+        </a>
         <p className="mt-6 text-center text-sm text-white/60">
           Do you have an account?{" "}
           <Link to="/login" className="text-white underline">

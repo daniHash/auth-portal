@@ -13,28 +13,32 @@ const app = express();
 app.use(express.json());
 
 app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false,
-    }),
+  cors({
+    origin: "http://localhost:5173",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  }),
+);
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: false,
+      secure: false,
+      sameSite: "lax",
+    },
+  }),
 );
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(
-    cors({
-        origin: process.env.CLIENT_URL,
-        methods: "GET,POST,PUT,DELETE",
-        credentials: true,
-    }),
-);
-
 app.use("/auth", authRoute);
 
 const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
