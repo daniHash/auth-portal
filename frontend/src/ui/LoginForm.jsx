@@ -25,7 +25,7 @@ const Form = () => {
   return (
     <form
       autoComplete="on"
-      className="flex w-full max-w-md flex-col items-baseline justify-center gap-10 rounded-2xl border border-white/10 bg-purple-800/5 p-8 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl"
+      className="flex w-full max-w-md flex-col items-baseline justify-center gap-10 rounded-2xl border border-white/10 bg-purple-800/5 p-8 text-white shadow-2xl shadow-black/40"
       onSubmit={handleSubmit}
     >
       <h2 className="w-full text-center text-2xl font-bold uppercase">Login</h2>
@@ -74,6 +74,7 @@ const Form = () => {
         </button>
         <button
           type="submit"
+          onClick={() => window.open("http://localhost:3000/auth/google", "_self")}
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-purple-200/5 py-3 font-medium text-white transition duration-300 hover:bg-indigo-900"
         >
           Continue With Google
