@@ -4,9 +4,7 @@
 
 ## 🌟 About The Project
 
-**Auth Portal** is a **modern, secure, and highly scalable authentication system** designed to simplify user management for web and mobile applications. Built with cutting-edge technologies, it provides a seamless experience for both developers and end-users.
-
-This project offers **robust authentication flows**, **multi-factor authentication (MFA)**, **social login integration**, and **real-time security monitoring**. Whether you're building a SaaS product, an internal tool, or a public-facing platform, **Auth Portal** gives you the foundation to manage users safely and efficiently.
+A modern full‑stack authentication system built with React on the frontend and Express/Node.js on the backend, featuring secure email/password login, Google OAuth integration, and session‑based authentication using cookies. This project includes protected routes, user registration and login flows, and a persistent session stored with express‑session, enabling users to authenticate and maintain sessions seamlessly across pages. It’s ideal as a starting point or boilerplate for web apps that need a robust and extensible authentication layer.
 
 ## 🔥 Key Features
 
