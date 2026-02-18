@@ -1,62 +1,61 @@
-# Auth Portal 🚀    
+# Auth Portal 🚀
 
 ---
 
-## 🌟 About The Project  
+## 🌟 About The Project
 
-**Auth Portal** is a **modern, secure, and highly scalable authentication system** designed to simplify user management for web and mobile applications. Built with cutting-edge technologies, it provides a seamless experience for both developers and end-users.  
+**Auth Portal** is a **modern, secure, and highly scalable authentication system** designed to simplify user management for web and mobile applications. Built with cutting-edge technologies, it provides a seamless experience for both developers and end-users.
 
-This project offers **robust authentication flows**, **multi-factor authentication (MFA)**, **social login integration**, and **real-time security monitoring**. Whether you're building a SaaS product, an internal tool, or a public-facing platform, **Auth Portal** gives you the foundation to manage users safely and efficiently.  
+This project offers **robust authentication flows**, **multi-factor authentication (MFA)**, **social login integration**, and **real-time security monitoring**. Whether you're building a SaaS product, an internal tool, or a public-facing platform, **Auth Portal** gives you the foundation to manage users safely and efficiently.
 
+## 🔥 Key Features
 
-
-## 🔥 Key Features  
-
-| Feature                      | Description                                                                 | Status |
-|------------------------------|-----------------------------------------------------------------------------|--------|
-| **User Registration & Login** | Secure email/password authentication                                       | ✅     |
-| **Social Login**             | Sign in , register with Google                                              | ✅     |
-| **Audit Logs**               | Real-time logging of user activities and security events.                   | ✅     |
+| Feature                       | Description                                               | Status |
+| ----------------------------- | --------------------------------------------------------- | ------ |
+| **User Registration & Login** | Secure email/password authentication                      | ✅     |
+| **Social Login**              | Sign in , register with Google                            | ✅     |
+| **Audit Logs**                | Real-time logging of user activities and security events. | ✅     |
 
 ---
 
-## 🛠️ Tech Stack  
+## 🛠️ Tech Stack
 
-### Frontend  
+### Frontend
+
 - **React 19**
-- **Tailwind CSS** for utility-first styling  
-- **React Router** for routing  
-- **Axios** for API calls  
+- **Tailwind CSS** for utility-first styling
+- **React Router** for routing
+- **Axios** for API calls
 
-### Backend  
-- **Node.js** (v18+)  
-- **Express.js** as the web framework  
+### Backend
+
+- **Node.js** (v18+)
+- **Express.js** as the web framework
 - **SQL**
-- **JSON Web Tokens (JWT)** for authentication  
+- **JSON Web Tokens (JWT)** for authentication
 
 ---
 
-## 🚀 Getting Started  
+## 🚀 Getting Started
 
-### Prerequisites  
+### Prerequisites
 
-Make sure you have the following installed on your machine:  
+Make sure you have the following installed on your machine:
 
-- **Node.js** (v18.x or higher)  
-- **npm** or **yarn**  
-- **SQL** (local or cloud instance)  
+- **Node.js** (v18.x or higher)
+- **npm** or **yarn**
+- **SQL** (local or cloud instance)
 
-### Installation  
+### Installation
 
-1. **Clone the repository**  
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/amir-khaksar/auth-portal.git
    cd auth-portal
    ```
 
-
-2. **Install dependencies**  
+2. **Install dependencies**
 
    ```bash
    # For frontend
@@ -68,16 +67,18 @@ Make sure you have the following installed on your machine:
    npm install
    ```
 
-### Configuration  
+### Configuration
 
-Create `.env` files in both `frontend` and `backend` directories.  
+Create `.env` files in both `frontend` and `backend` directories.
 
-#### Frontend `.env.development`  
+#### Frontend `.env.development`
+
 ```env
 VITE_API_BASE_URL=http://localhost:3000
 ```
 
-#### Backend `.env`  
+#### Backend `.env`
+
 ```env
 CLIENT_ID=3011637808-6m4v7d1klr64bn4025imj40ot39rapts.apps.googleusercontent.com
 CLIENT_SECRET=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
@@ -88,9 +89,9 @@ PORT=3000
 
 > 🔐 **Important**: Never commit `.env` files to version control. They are already in `.gitignore`.
 
-### Running the Project  
+### Running the Project
 
-#### Option 1: Local Development  
+#### Option 1: Local Development
 
 ```bash
 # Start backend (port 3000)
@@ -102,39 +103,39 @@ cd ../frontend
 npm run dev
 ```
 
+Access the app at:
 
-Access the app at:  
-- **Frontend**: http://localhost:5173  
-- **Backend API**: http://localhost:3000  
-
----
-
-## 📸 Screenshots & Demo  
-
-### Login Page  
-<img src="https://raw.githubusercontent.com/amir-khaksar/auth-portal/development/.github/images/login.png" alt="Login Page" style="width: 100%;">  
-
-### Dashboard  
-<img src="https://raw.githubusercontent.com/amir-khaksar/auth-portal/development/.github/images/dashboard.png" alt="Dashboard" style="width: 100%;">  
-
-### Social Login Integration  
-<img src="https://raw.githubusercontent.com/amir-khaksar/auth-portal/development/.github/images/social-login.png" alt="Social Login" style="width: 100%;">  
-
-### MFA Setup  
-<img src="https://raw.githubusercontent.com/amir-khaksar/auth-portal/development/.github/images/mfa-setup.png" alt="MFA Setup" style="width: 100%;">  
-
-
-## 👥 Creators  
-
-Auth Portal is proudly developed and maintained by these amazing contributors:  
-
-### **Amir Khaksar**  
-🔹 **GitHub**: [@amir-khaksar](https://github.com/amir-khaksar)  
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3000
 
 ---
 
-### **Danial Hajhashemkhani**  
-🔹 **GitHub**: [@daniHash](https://github.com/danihash)  
+## 📸 Screenshots & Demo
+
+### Login Page
+
+<img src="./images/login.png" alt="Login Page" style="width: 100%;">
+
+### Register
+
+<img src="./images/register.png" alt="Dashboard" style="width: 100%;">
+
+### Dashboard
+
+<img src="./images/dash.png" alt="Social Login" style="width: 100%;">
+
+## 👥 Creators
+
+Auth Portal is proudly developed and maintained by these amazing contributors:
+
+### **Amir Khaksar**
+
+🔹 **GitHub**: [@amir-khaksar](https://github.com/amir-khaksar)
 
 ---
 
+### **Danial Hajhashemkhani**
+
+🔹 **GitHub**: [@daniHash](https://github.com/danihash)
+
+---
