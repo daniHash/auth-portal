@@ -69,7 +69,7 @@ Make sure you have the following installed on your machine:
 
 Create `.env` files in both `frontend` and `backend` directories.
 
-#### Frontend `.env.development`
+#### Frontend `.env`
 
 ```env
 VITE_API_BASE_URL=http://localhost:3000
@@ -96,7 +96,7 @@ PORT=3000
 cd backend
 npm run dev
 
-# In another terminal, start frontend (port 3000)
+# In another terminal, start frontend (port 5173)
 cd ../frontend
 npm run dev
 ```
@@ -137,4 +137,5 @@ Auth Portal is proudly developed and maintained by these amazing contributors:
 🔹 **GitHub**: [@daniHash](https://github.com/danihash)
 
 ---
+
 
