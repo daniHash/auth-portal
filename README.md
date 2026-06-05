@@ -78,14 +78,12 @@ VITE_API_BASE_URL=http://localhost:3000
 #### Backend `.env`
 
 ```env
-CLIENT_ID=3011637808-6m4v7d1klr64bn4025imj40ot39rapts.apps.googleusercontent.com
-CLIENT_SECRET=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
+CLIENT_ID=example
+CLIENT_SECRET=example
 CLIENT_URL=http://localhost:5173/dashboard
-SESSION_SECRET=;fjoiwjein,mcla;dj;lkhg
+SESSION_SECRET=example
 PORT=3000
-```
-
-> 🔐 **Important**: Never commit `.env` files to version control. They are already in `.gitignore`.
+```
 
 ### Running the Project
 
